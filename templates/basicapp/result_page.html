@@ -1,0 +1,14 @@
+{% extends 'basicapp/base.html' %}
+{% debug %}
+{% block content %}
+    <div class="content-section">
+        <h2>Thank you for your answers: <br> Result Page</h2>
+        <p>Correct answers: {{ correct }}</p>
+        {% for datum in data %}
+            <p><b class="">{{ datum.word }}</b> - <em
+                    class="{% if datum.word != datum.choice %}text-danger{% else %}text-success{% endif %}">{{ datum.choice }}</em>
+            </p>
+        {% endfor %}
+        <p>{{ count_successful }}</p>
+    </div>
+{% endblock %}

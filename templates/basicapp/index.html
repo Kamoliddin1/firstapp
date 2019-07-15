@@ -1,0 +1,19 @@
+{% extends 'basicapp/base.html' %}
+
+{% block content %}
+    <div class="content-section">
+        <h1>Welcome</h1>
+        {% if user.is_authenticated %}
+            <h3>Hello {{ user.username }}</h3>
+            <h5>Let's start our game</h5>
+        {% else %}
+            <h3>Please register if u want play a game</h3>
+        {% endif %}
+        <form action="{% url 'test' %}" method="post">
+            {% csrf_token %}
+            <h4>Choose # of questions: </h4><br>
+            <input type="number" name="no_of_questions" placeholder="Submit"><br>
+            <button class="btn btn-outline-info mt-3" name="button" type="submit">Start</button>
+        </form>
+    </div>
+{% endblock %}
