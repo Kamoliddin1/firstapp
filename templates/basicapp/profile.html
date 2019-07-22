@@ -1,25 +1,26 @@
 {% extends 'basicapp/base.html' %}
-{% block content %}
-    <div class="content-section">
-    <form method="post">
-    {% csrf_token %}
-        <div class="media">
-
-            <img src="{{ user.userprofileinfo.img.url }}" class="rounded-circle account-img">
-            <div class="media-body">
-                <h3>Hi dear user {{ user.username }}</h3>
-                <p class="text-muted mt-2 border-top">Your Correct Answers: <b>{{ correct_answers }}</b></p>
-                {% if incorrect_answers == 0 %}
-                    <p class="text-muted mt-2">Your InCorrect Answers: <b>{{ incorrect_answers }}</b><span class="ml-5"><b><--You are so talented></b></span></p>
-                {% else %}
-                    <p class="text-muted mt-2">Your InCorrect Answers: <b>{{ incorrect_answers }}</b></p>
-                {% endif %}
-                <p class="text-muted mt-2">Your Total Answers: <b>{{ total_answers }}</b></p>
-                <h6 class="text-success">Successful number of test: {{ success }} times</h6>
-                <h6 class="text-danger">Unsuccessful number of test, you couldn't manage to be on time: {{ fail }} times</h6>
-            </div>
-
+{% block aside %}
+    <div class="col-md-8">
+        <div class="content-section">
+            <form method="post">
+                {% csrf_token %}
+                <div class="media">
+                    <img src="{{ user.userprofileinfo.profile_image.url }}" class="rounded-circle account-img">
+                    <div class="media-body">
+                        <h3>Hi dear user {{ user.username }}</h3>
+                        <p class="text-muted mt-2 border-top">Your Correct Answers: <b>{{ correct_answers }}</b></p>
+                        {% if incorrect_answers == 0 %}
+                            <p class="text-muted mt-2">You answered correctly: <b>{{ incorrect_answers }}</b><span class="ml-5"><b><--You are so talented></b></span></p>
+                        {% else %}
+                            <p class="text-muted mt-2">Wrong answers: <b>{{ incorrect_answers }}</b></p>
+                        {% endif %}
+{#                        <p class="text-muted mt-2">Your Total Answers: <b>{{ total_answers }}</b></p>#}
+                        <h6 class="text-success">Successful tests: {{ success }} times</h6>
+                        <h6 class="text-danger">You failed: {{ fail }} times</h6>
+                    </div>
+                </div>
+            </form>
         </div>
-    </form>
     </div>
+    {% include 'basicapp/snippet_archive.html' %}
 {% endblock %}

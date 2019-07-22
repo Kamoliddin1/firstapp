@@ -88,3 +88,11 @@ a.article-title:hover {
     width: 200px;
     background: white;
 }
+
+.card-body {
+    padding: 0.25rem 1rem !important;
+}
+
+.step-links {
+    display: inline-flex;
+}

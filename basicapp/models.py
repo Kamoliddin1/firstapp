@@ -7,7 +7,7 @@ from itertools import product
 class UserProfileInfo(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     portfolio_site = models.URLField(blank=True)
-    img = models.ImageField(upload_to='profile_pics', default='default.jpg')
+    profile_image = models.ImageField(upload_to='profile_pics', default='default.jpg')
 
     def __str__(self):
         return self.user.username
@@ -75,5 +75,3 @@ class Answer(models.Model):
             return True
         else:
             return False
-
-

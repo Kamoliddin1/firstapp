@@ -5,35 +5,16 @@ from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.utils import timezone
+from django.views.generic import ArchiveIndexView
+from django.core.paginator import Paginator
 
 from basicapp.forms import TestSessionForm, AnswerForm, AnswerFormSet, UserRegisterForm
-from basicapp.models import Question, TestSession, UserProfileInfo, Answer
+from basicapp.models import Question, TestSession, UserProfileInfo
 
 
 def index(request):
     return render(request, 'basicapp/index.html')
 
-
-@login_required()
-def profile(request):
-    correct_answers = UserProfileInfo.objects.filter(user=request.user)[0].correct_answers()
-    incorrect_answers = UserProfileInfo.objects.filter(user=request.user)[0].incorrect_answers()
-    total_answers = UserProfileInfo.objects.filter(user=request.user)[0].total_answers()
-    if request.method == 'GET':
-        count_success = 0
-        test_sessions = TestSession.objects.filter(answers__user=request.user).distinct()
-        for test_session in test_sessions:
-            if test_session.finished_at < test_session.created_at + timezone.timedelta(seconds=test_session.no_of_questions * 10):
-                count_success += 1
-        return render(request, 'basicapp/profile.html', {
-            'correct_answers': correct_answers,
-            'incorrect_answers': incorrect_answers,
-            'total_answers': total_answers,
-            'success': count_success,
-            'fail': len(test_sessions) - count_success
-        })
-    else:
-        return HttpResponseRedirect(reverse('index'))
 
 
 def register(request):
@@ -41,7 +22,7 @@ def register(request):
         form = UserRegisterForm(request.POST)
         if form.is_valid():
             user = form.save()
-            UserProfileInfo.objects.create(img=request.FILES['img'], user=user)
+            UserProfileInfo.objects.create(profile_image=request.POST.get('profile_image', 'default.jpg'), user=user)
             username = form.cleaned_data.get('username')
             messages.success(request, f'{username} Your Account was created successfully! Please Login')
             return redirect('login')
@@ -80,7 +61,6 @@ def submit_test_session(request):
         AnswerFormSet = formset_factory(AnswerForm, extra=0, max_num=0)
         formset = AnswerFormSet(data=request.POST)
         answers = []
-        time_is_up = []
         now = timezone.now()
         session = None
         if formset.is_valid():
@@ -93,8 +73,6 @@ def submit_test_session(request):
                         if now - session.created_at - timezone.timedelta(
                                 seconds=session.no_of_questions * 10) > timezone.timedelta(seconds=0):
                             messages.warning(request, f'Time is up')
-                            time_is_up.append(form.save(commit=True))
-                            return HttpResponseRedirect(reverse('index'))
                         else:
                             messages.success(request, f'You have passed successfully')
 
@@ -104,7 +82,54 @@ def submit_test_session(request):
         return render(request, 'basicapp/result_page.html',
                       {'data': data,
                        'correct': correct_answers,
-                       'wrong': len(answers) - correct_answers, }
-                      )
+                       'wrong': len(answers) - correct_answers, })
     else:
         return HttpResponseRedirect(reverse('index'))
+
+
+class TestSessionArchiveView(ArchiveIndexView):
+    template_name = 'basicapp/snippet_archive.html'
+    queryset = TestSession.objects.all()
+    paginate_by = 5
+
+    def get_queryset(self):
+        if self.request and self.request.user:
+            self.queryset = TestSession.objects.filter(answers__user=self.request.user).distinct()
+
+        return super().get_queryset()
+
+    def get_template_names(self):
+        return [self.template_name]
+
+
+class ProfileView(ArchiveIndexView):
+    template_name = 'basicapp/profile.html'
+    queryset = TestSession.objects.all()
+    paginate_by = 5
+
+    def get_queryset(self):
+        if self.request and self.request.user:
+            self.queryset = TestSession.objects.filter(answers__user=self.request.user).distinct()
+
+        return super().get_queryset()
+
+    def get_template_names(self):
+        return [self.template_name]
+
+    def get_context_data(self, **kwargs):
+        data = super().get_context_data(**kwargs)
+        data['correct_answers'] = UserProfileInfo.objects.filter(user=self.request.user)[0].correct_answers()
+        data['incorrect_answers'] = UserProfileInfo.objects.filter(user=self.request.user)[0].incorrect_answers()
+        data['total_answers'] = UserProfileInfo.objects.filter(user=self.request.user)[0].total_answers()
+
+        count_success = 0
+        test_sessions = TestSession.objects.filter(answers__user=self.request.user).distinct()
+        for test_session in test_sessions:
+            if test_session.finished_at < test_session.created_at + \
+                    timezone.timedelta(seconds=test_session.no_of_questions * 10):
+                count_success += 1
+        data['success'] = count_success
+        data['fail'] = len(test_sessions) - count_success
+
+        return data
+
