@@ -1,5 +1,3 @@
-{#{% extends 'basicapp/base.html' %}#}
-{#{% block aside %}#}
 <div class="col-md-4">
     <div class="content-section">
         <h3>Archive Section</h3>
@@ -27,7 +25,7 @@
                         <a id="prev" class="page-link" href="?page=1">First</a>
                     </li>
                     <li class="page-item">
-                        <a class="page-link" href="?page={{ page_obj.previous_page_number }}">&laquo;</a>
+                        <a class="page-link" id="prev" href="?page={{ page_obj.previous_page_number }}">&laquo;</a>
                     </li>
                 {% endif %}
 
@@ -43,50 +41,4 @@
         </ul>
     </div>
 </div>
-{#{% endblock %}#}
 
-{% block javascript %}
-    <script type="text/javascript">
-        function ajax_get_update() {
-            $.get(url, function (results) {
-                //get the parts of the result you want to update. Just select the needed parts of the response
-                var table = $("ul.list-group", results);
-                var span = $("ul.pagination", results);
-
-                //update the ajax_table_result with the return value
-                $('#js-archive-ajax').html(table);
-                $('.step-links').html(span);
-            }, "html");
-        }
-
-        //bind the corresponding links in your document to the ajax get function
-        $(document).ready(function () {
-            $('.step-links #prev').click(function (e) {
-                e.preventDefault();
-                url = ($('.step-links #prev')[0].href);
-                ajax_get_update();
-            });
-            $('.step-links #next').click(function (e) {
-                e.preventDefault();
-                url = ($('.step-links #next')[0].href);
-                ajax_get_update();
-
-            });
-        });
-
-        //since the links are reloaded we have to bind the links again
-        //to the actions
-        $(document).ajaxStop(function () {
-            $('.step-links #prev').click(function (e) {
-                e.preventDefault();
-                url = ($('.step-links #prev')[0].href);
-                ajax_get_update();
-            });
-            $('.step-links #next').click(function (e) {
-                e.preventDefault();
-                url = ($('.step-links #next')[0].href);
-                ajax_get_update();
-            });
-        });
-    </script>
-{% endblock %}

@@ -4,17 +4,11 @@
     <bookmark url="file://$PROJECT_DIR$/basicapp/views.py" line="50" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b14b796-d40c-4af3-be0b-e0c860d522b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="4b14b796-d40c-4af3-be0b-e0c860d522b4" name="Default Changelist" comment="ajax fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BasicProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/BasicProject/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basicapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/basicapp/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basicapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/basicapp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basicapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/basicapp/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/blog.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/blog.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/basicapp/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/basicapp/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/basicapp/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/basicapp/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/basicapp/snippet_archive.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/basicapp/snippet_archive.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,8 +57,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/basicapp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
+            <state relative-caret-position="384">
+              <caret line="111" column="98" lean-forward="true" selection-start-line="111" selection-start-column="98" selection-end-line="111" selection-end-column="98" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -75,7 +69,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/basicapp/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="170">
               <caret line="19" column="79" selection-start-line="19" selection-start-column="79" selection-end-line="19" selection-end-column="79" />
               <folding>
                 <element signature="e#0#57#0" expanded="true" />
@@ -85,37 +79,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/basicapp/snippet_archive.html">
+        <entry file="file://$PROJECT_DIR$/templates/basicapp/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="94" selection-start-line="10" selection-start-column="94" selection-end-line="10" selection-end-column="94" />
+            <state relative-caret-position="619">
+              <caret line="105" column="13" lean-forward="true" selection-start-line="105" selection-start-column="13" selection-end-line="105" selection-end-column="13" />
+              <folding>
+                <element signature="n#script#4;n#body#0;n#html#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/BasicProject/settings.py">
+        <entry file="file://$PROJECT_DIR$/templates/basicapp/snippet_archive.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="107" lean-forward="true" selection-start-line="107" selection-end-line="107" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/django/views/generic/list.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="112" column="52" selection-start-line="112" selection-start-column="31" selection-end-line="112" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/django/contrib/auth/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="322" column="26" selection-start-line="322" selection-start-column="26" selection-end-line="322" selection-end-column="26" />
+            <state relative-caret-position="425">
+              <caret line="25" column="25" lean-forward="true" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -133,7 +112,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>fac</find>
       <find>answer</find>
       <find>mb</find>
       <find>test</find>
@@ -163,6 +141,7 @@
       <find>page_obj</find>
       <find>context_object_name</find>
       <find>req</find>
+      <find>prev</find>
     </findStrings>
     <replaceStrings>
       <replace>page</replace>
@@ -190,14 +169,14 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/f67e2439-5f5f-4c1f-8ddc-31e2cabef061/console.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/templates/basicapp/archive_snippet.html" />
-        <option value="$PROJECT_DIR$/templates/basicapp/base.html" />
         <option value="$PROJECT_DIR$/templates/basicapp/profile.html" />
         <option value="$PROJECT_DIR$/static/css/blog.css" />
         <option value="$PROJECT_DIR$/basicapp/models.py" />
         <option value="$PROJECT_DIR$/basicapp/urls.py" />
         <option value="$PROJECT_DIR$/basicapp/views.py" />
-        <option value="$PROJECT_DIR$/templates/basicapp/snippet_archive.html" />
         <option value="$PROJECT_DIR$/BasicProject/settings.py" />
+        <option value="$PROJECT_DIR$/templates/basicapp/base.html" />
+        <option value="$PROJECT_DIR$/templates/basicapp/snippet_archive.html" />
       </list>
     </option>
   </component>
@@ -213,12 +192,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="BasicProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="BasicProject" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BasicProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BasicProject" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BasicProject" type="b2602c69:ProjectViewProjectNode" />
@@ -235,7 +220,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -332,12 +316,13 @@
       <workItem from="1563271861464" duration="6450000" />
       <workItem from="1563442765637" duration="9987000" />
       <workItem from="1563516928477" duration="13169000" />
-      <workItem from="1563774454146" duration="23899000" />
+      <workItem from="1563774454146" duration="27057000" />
+      <workItem from="1563861036136" duration="1632000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="240304000" />
+    <option name="totallyTimeSpent" value="245094000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -350,14 +335,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5108959" visible="true" weight="0.11946667" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5108959" weight="0.12053333" />
       <window_info id="Favorites" order="1" sideWeight="0.48910412" side_tool="true" weight="0.11946667" />
       <window_info auto_hide="true" id="Structure" order="2" sideWeight="0.47244096" weight="0.14845759" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.32822478" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32822478" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49850747" weight="0.42575285" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.49850747" visible="true" weight="0.13084112" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.5711319" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -783,13 +769,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/basicapp/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="785">
-          <caret line="64" selection-start-line="64" selection-end-line="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/django/core/handlers/base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="121">
@@ -835,13 +814,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basicapp/urls.py">
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/django/views/generic/list.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="79" selection-start-line="19" selection-start-column="79" selection-end-line="19" selection-end-column="79" />
-          <folding>
-            <element signature="e#0#57#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="168">
+          <caret line="112" column="52" selection-start-line="112" selection-start-column="31" selection-end-line="112" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BasicProject/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1176">
+          <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
         </state>
       </provider>
     </entry>
@@ -852,34 +835,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/django/views/generic/list.py">
+    <entry file="file://$PROJECT_DIR$/basicapp/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="112" column="52" selection-start-line="112" selection-start-column="31" selection-end-line="112" selection-end-column="52" />
+        <state relative-caret-position="170">
+          <caret line="19" column="79" selection-start-line="19" selection-start-column="79" selection-end-line="19" selection-end-column="79" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/basicapp/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
+        <state relative-caret-position="384">
+          <caret line="111" column="98" lean-forward="true" selection-start-line="111" selection-start-column="98" selection-end-line="111" selection-end-column="98" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/basicapp/snippet_archive.html">
+    <entry file="file://$PROJECT_DIR$/templates/basicapp/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="94" selection-start-line="10" selection-start-column="94" selection-end-line="10" selection-end-column="94" />
+        <state relative-caret-position="619">
+          <caret line="105" column="13" lean-forward="true" selection-start-line="105" selection-start-column="13" selection-end-line="105" selection-end-column="13" />
+          <folding>
+            <element signature="n#script#4;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BasicProject/settings.py">
+    <entry file="file://$PROJECT_DIR$/templates/basicapp/snippet_archive.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="107" lean-forward="true" selection-start-line="107" selection-end-line="107" selection-end-column="28" />
+        <state relative-caret-position="425">
+          <caret line="25" column="25" lean-forward="true" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
         </state>
       </provider>
     </entry>
