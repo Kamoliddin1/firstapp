@@ -6,7 +6,7 @@ from itertools import product
 
 class UserProfileInfo(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    portfolio_site = models.URLField(blank=True)
+    portfolio_site = models.URLField(blank=True, null=True)
     profile_image = models.ImageField(upload_to='profile_pics', default='default.jpg')
 
     def __str__(self):
@@ -67,7 +67,7 @@ class Answer(models.Model):
     user = models.ForeignKey(User, related_name='answers', on_delete=models.CASCADE)
     question = models.ForeignKey(Question, related_name='answers', on_delete=models.CASCADE)
     session = models.ForeignKey(TestSession, related_name='answers', on_delete=models.CASCADE)
-    choice = models.CharField(max_length=20)
+    choice = models.CharField(max_length=20, null=True, default=None)
 
     @property
     def is_correct(self):

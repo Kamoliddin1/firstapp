@@ -1,10 +1,10 @@
 {% extends 'basicapp/base.html' %}
 {% csrf_token %}
 {% load crispy_forms_tags %}
-{% debug %}
+
 {% block content %}
     <div class="content-section">
-        <h2>Welcome to Game</h2>
+        <h2>Welcome to the Game</h2>
         <div id="noDays" class=""></div>
         <form action="{% url 'submit_test_session' %}" method="post">
             {% csrf_token %}
@@ -19,12 +19,10 @@
                             <option value="{{ value }}">{{ label }}</option>
                         {% endfor %}
                     </select>
-                    {{ form.session.as_hidden }}
-                    {{ form.user.as_hidden }}
-                    {{ form.question.as_hidden }}
+                    {{ form.id.as_hidden }}
                 </div>
             {% endfor %}
-            <button type="submit" name="result" class="btn btn-outline-success mt-5">Submit</button>
+            <button type="submit" value="result" name="result" class="btn btn-outline-success mt-5">Submit</button>
             <script>
                 $('#noDays').countdown({
                     until: {{ time_for }},

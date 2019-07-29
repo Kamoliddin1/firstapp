@@ -8,20 +8,16 @@ from basicapp.models import Question, Answer, UserProfileInfo
 
 
 class UserRegisterForm(UserCreationForm):
-    email = forms.EmailField(required=False)
-    img = forms.ImageField(required=False)
 
     class Meta:
         model = User
-        fields = ['username', 'email', 'password1', 'password2', 'img']
+        fields = ['username', 'password1', 'password2']
 
 
 class UserProfileInfoForm(forms.ModelForm):
-    portfolio_site = forms.URLField(required=False)
-
     class Meta:
         model = UserProfileInfo
-        fields = ['user', 'portfolio_site']
+        fields = ['portfolio_site', 'profile_image']
 
 
 class TestSessionForm(forms.Form):
@@ -37,10 +33,11 @@ class TestSessionForm(forms.Form):
 
 class AnswerForm(ModelForm):
     choice = forms.ChoiceField()
+    id = forms.IntegerField()
 
     class Meta:
         model = Answer
-        fields = ('user', 'question', 'session', 'choice')
+        fields = ('id', 'choice')
 
     def __init__(self, *args, **kwargs):
         choices = kwargs.pop('choices', None)

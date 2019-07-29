@@ -11,7 +11,10 @@
                         {% for res in result.answers.all %}
                             <div class="card card-body custom-body">
                                 <small><p>{{ res.question.word }}</p></small>
-                                <em class="{% if res.choice != res.question.word %}text-danger{% else %}text-success{% endif %}">{{ res.choice }}</em>
+                                <em class="{% if res.choice != res.question.word %}
+                                text-danger{% else %}
+                                text-success{% endif %}">{% if res.choice == None %}Not finished{% else %}
+                                    {{ res.choice }}{% endif %}</em>
                             </div>
                         {% endfor %}
                     </li>
