@@ -4,19 +4,19 @@
     <bookmark url="file://$PROJECT_DIR$/basicapp/views.py" line="50" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b14b796-d40c-4af3-be0b-e0c860d522b4" name="Default Changelist" comment="ajax fixed">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f67e2439-5f5f-4c1f-8ddc-31e2cabef061.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f67e2439-5f5f-4c1f-8ddc-31e2cabef061.xml" afterDir="false" />
+    <list default="true" id="4b14b796-d40c-4af3-be0b-e0c860d522b4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/basicapp/migrations/0003_auto_20190725_1431.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/basicapp/migrations/0004_auto_20190726_1201.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile_pics/1_Blackpink_-_Kill_This_Love.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile_pics/1_Blackpink_-_Kill_This_Love_SxMPKnT.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile_pics/_89716241_thinkstockphotos-523060154.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile_pics/_89716241_thinkstockphotos-523060154_RYZhYhe.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile_pics/_89716241_thinkstockphotos-523060154_cuEO9yB.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/basicapp/profile_update.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BasicProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/BasicProject/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basicapp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/basicapp/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basicapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/basicapp/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basicapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/basicapp/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basicapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/basicapp/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/basicapp/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/basicapp/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/basicapp/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/basicapp/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/basicapp/snippet_archive.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/basicapp/snippet_archive.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/basicapp/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/basicapp/test.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,55 +65,38 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/basicapp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="56" column="24" lean-forward="true" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
+            <state relative-caret-position="504">
+              <caret line="103" column="47" selection-start-line="103" selection-start-column="47" selection-end-line="103" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basicapp/forms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="918">
+              <caret line="54" selection-start-line="54" selection-end-line="54" />
               <folding>
-                <element signature="e#1#41#0" expanded="true" />
+                <element signature="e#0#24#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BasicProject/urls.py">
+        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/django/forms/formsets.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
-              <folding>
-                <element signature="e#636#668#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="969">
+              <caret line="65" column="14" selection-start-line="65" selection-start-column="10" selection-end-line="65" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://f67e2439-5f5f-4c1f-8ddc-31e2cabef061/schema/main/table/basicapp_answer">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state projectRestartId="36318467-de58-49f4-a202-9b7fdd575edc">
-              <filtering>
-                <filter text="" />
-                <filter text="session_id = 157" />
-              </filtering>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://f67e2439-5f5f-4c1f-8ddc-31e2cabef061/schema/main/table/basicapp_testsession">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state projectRestartId="36318467-de58-49f4-a202-9b7fdd575edc">
-              <filtering>
-                <filter text="" />
-              </filtering>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/basicapp/result_page.html">
+        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/django/forms/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="45" lean-forward="true" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
+            <state relative-caret-position="7718">
+              <caret line="468" column="6" selection-start-line="468" selection-start-column="6" selection-end-line="468" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -121,26 +104,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/basicapp/profile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="136" selection-start-line="24" selection-start-column="136" selection-end-line="24" selection-end-column="136" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/basicapp/snippet_archive.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="96" selection-start-line="15" selection-start-column="96" selection-end-line="15" selection-end-column="96" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/basicapp/test.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="42" lean-forward="true" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+            <state relative-caret-position="119">
+              <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -148,11 +113,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/basicapp/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+            <state relative-caret-position="510">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
               <folding>
                 <element signature="e#0#57#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/basicapp/profile_update.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -170,9 +144,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>template</find>
-      <find>js</find>
-      <find>def render_to_response</find>
       <find>total_answers</find>
       <find>core</find>
       <find>paginate_by = 5</find>
@@ -200,6 +171,9 @@
       <find>render_to_res</find>
       <find>model</find>
       <find>fail</find>
+      <find>iter</find>
+      <find>save</find>
+      <find>media_root</find>
     </findStrings>
     <replaceStrings>
       <replace>page</replace>
@@ -215,7 +189,6 @@
         <option value="$PROJECT_DIR$/templates/test_session/index.html" />
         <option value="$PROJECT_DIR$/templates/basicapp/test2.html" />
         <option value="$PROJECT_DIR$/templates/basicapp/login.html" />
-        <option value="$PROJECT_DIR$/BasicProject/urls.py" />
         <option value="$PROJECT_DIR$/static/css/style.css" />
         <option value="$PROJECT_DIR$/basicapp/apps.py" />
         <option value="$PROJECT_DIR$/basicapp/signals.py" />
@@ -227,22 +200,23 @@
         <option value="$PROJECT_DIR$/templates/basicapp/profile_update_form.html" />
         <option value="$PROJECT_DIR$/templates/basicapp/base.html" />
         <option value="$PROJECT_DIR$/templates/basicapp/registration.html" />
-        <option value="$PROJECT_DIR$/BasicProject/settings.py" />
         <option value="$PROJECT_DIR$/templates/basicapp/profile_update.html" />
         <option value="$PROJECT_DIR$/basicapp/forms.py" />
-        <option value="$PROJECT_DIR$/basicapp/models.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/f67e2439-5f5f-4c1f-8ddc-31e2cabef061/console.sql" />
         <option value="$PROJECT_DIR$/templates/basicapp/test.html" />
         <option value="$PROJECT_DIR$/templates/basicapp/snippet_archive.html" />
-        <option value="$PROJECT_DIR$/basicapp/urls.py" />
         <option value="$PROJECT_DIR$/templates/basicapp/profile.html" />
+        <option value="$PROJECT_DIR$/basicapp/models.py" />
+        <option value="$PROJECT_DIR$/basicapp/urls.py" />
+        <option value="$PROJECT_DIR$/BasicProject/urls.py" />
+        <option value="$PROJECT_DIR$/BasicProject/settings.py" />
         <option value="$PROJECT_DIR$/basicapp/views.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="608" />
-    <option name="y" value="-22" />
+    <option name="x" value="615" />
+    <option name="y" value="223" />
     <option name="width" value="1036" />
     <option name="height" value="693" />
   </component>
@@ -252,6 +226,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -272,13 +247,7 @@
             <path>
               <item name="BasicProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="BasicProject" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BasicProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BasicProject" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="basicapp" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BasicProject" type="b2602c69:ProjectViewProjectNode" />
@@ -288,7 +257,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -297,22 +265,23 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/media" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Documents\MyProjects\BasicProject\media" />
+      <recent name="C:\Users\User\Documents\MyProjects\BasicProject\templates\basicapp" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Documents\MyProjects\BasicProject\media" />
+      <recent name="C:\Users\User\Documents\MyProjects\BasicProject\media\profile_pics" />
       <recent name="C:\Users\User\Documents\MyProjects\BasicProject\basicapp\migrations" />
       <recent name="C:\Users\User\Documents\MyProjects\BasicProject\basicapp" />
       <recent name="C:\Users\User\Documents\MyProjects\BasicProject\static\css" />
-      <recent name="C:\Users\User\Documents\MyProjects\BasicProject\static\js" />
-      <recent name="C:\Users\User\Documents\MyProjects\BasicProject\media" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\User\Documents\MyProjects\BasicProject\templates\basicapp" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -389,7 +358,9 @@
       <workItem from="1563861036136" duration="5487000" />
       <workItem from="1564040221102" duration="22749000" />
       <workItem from="1564119196210" duration="23468000" />
-      <workItem from="1564378904063" duration="21341000" />
+      <workItem from="1564378904063" duration="29098000" />
+      <workItem from="1564467355390" duration="7172000" />
+      <workItem from="1564486139804" duration="3749000" />
     </task>
     <task id="LOCAL-00001" summary="ajax fixed">
       <created>1563862725096</created>
@@ -398,11 +369,18 @@
       <option name="project" value="LOCAL" />
       <updated>1563862725096</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="not finished questions added">
+      <created>1564402621806</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1564402621806</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="316507000" />
+    <option name="totallyTimeSpent" value="335185000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -417,14 +395,14 @@
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5108959" visible="true" weight="0.105066665" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5108959" visible="true" weight="0.22613333" />
       <window_info id="Favorites" order="1" sideWeight="0.48910412" side_tool="true" weight="0.11946667" />
       <window_info auto_hide="true" id="Structure" order="2" sideWeight="0.47244096" weight="0.14845759" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.3281412" />
       <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.32822478" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49850747" visible="true" weight="0.24922119" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.2793354" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.3281412" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.49850747" visible="true" weight="0.1443406" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.43717548" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.3281412" />
@@ -438,7 +416,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" weight="0.32923076" />
-      <window_info active="true" anchor="right" id="Database" order="4" visible="true" weight="0.27733332" />
+      <window_info anchor="right" id="Database" order="4" weight="0.53333336" />
       <window_info anchor="right" x="0" y="0" width="260" height="634" id="Documentation" order="5" side_tool="true" weight="0.20628998" />
       <window_info anchor="right" id="Quick Notes" order="6" weight="0.29493332" />
     </layout>
@@ -458,7 +436,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ajax fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajax fixed" />
+    <MESSAGE value="not finished questions added" />
+    <option name="LAST_COMMIT_MESSAGE" value="not finished questions added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -470,12 +449,6 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="Python.DjangoServer">
-        <watch expression="nulltest = TestSession.objects.get(id=144)" language="Python" />
-        <watch expression="notf = TestSession.objects.get(id=143)" language="Python" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
@@ -539,81 +512,58 @@
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>Answer.objects.filter(question=question, session=pk)</expression-string>
+        <expression-string>Answer.objects.get(=168).user.id</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>Answer.objects.filter(question=question)</expression-string>
+        <expression-string>Answer.objects.get(session_id=168).user.id</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>Question.objects.order_by('?')[0]</expression-string>
+        <expression-string>Answer.objects.get(id=168).user.id</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>Question.objects.order_by('?')</expression-string>
+        <expression-string>Answer.objects.get(pk=168).user.id</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>Question.objects.filter(answers__session_id=pk)[0]</expression-string>
+        <expression-string>Answer.objects.get(pk=pk).user.id</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>Question.objects.filter(answers__session_id=pk)</expression-string>
+        <expression-string>Answer.objects.get(pk=pk).user</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>Question.objects.get(answers__session_id=pk)</expression-string>
+        <expression-string>Answer.objects.get(pk=pk).id</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>test_session.finished_at ,test_session.created_at + timezone.timedelta(seconds=10)</expression-string>
+        <expression-string>Answer.objects.get(pk=pk)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>test_session.finished_at - test_session.created_at + timezone.timedelta(seconds=10)</expression-string>
+        <expression-string>Answer.objects.filter(pk=pk)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>test_session.finished_at, (test_session.created_at + timezone.timedelta(seconds=10)).second</expression-string>
+        <expression-string>Answer.objects.filter(pk=pk).user.id</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://f67e2439-5f5f-4c1f-8ddc-31e2cabef061/schema/main/table/auth_user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="571e430d-ca1d-4cdb-a658-fa4b40a27f8a">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/pathlib.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="545" selection-start-line="545" selection-end-line="545" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/django/core/checks/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/django/core/management/base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
@@ -698,22 +648,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BasicProject/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="110" column="9" selection-start-line="110" selection-end-line="110" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://f67e2439-5f5f-4c1f-8ddc-31e2cabef061/schema/main/table/basicapp_userprofileinfo">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="571e430d-ca1d-4cdb-a658-fa4b40a27f8a">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/django/views/generic/edit.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2006">
@@ -777,27 +711,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/django/forms/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="656" column="8" selection-start-line="656" selection-start-column="8" selection-end-line="656" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/django/contrib/auth/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
           <caret line="169" selection-start-line="169" selection-end-line="169" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basicapp/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="42" column="45" lean-forward="true" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -865,48 +782,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/basicapp/profile_update.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/basicapp/result_page.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="45" lean-forward="true" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basicapp/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/basicapp/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="42" lean-forward="true" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/basicapp/snippet_archive.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="96" selection-start-line="15" selection-start-column="96" selection-end-line="15" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/django/contrib/auth/decorators.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
@@ -919,41 +798,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basicapp/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="30" column="24" lean-forward="true" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
+    <entry file="das://f67e2439-5f5f-4c1f-8ddc-31e2cabef061/schema/main/table/basicapp_userprofileinfo">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="36318467-de58-49f4-a202-9b7fdd575edc">
+          <filtering>
+            <filter text="" />
+          </filtering>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/django/forms/formsets.py">
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/django/contrib/auth/decorators.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="417" column="4" selection-start-line="417" selection-start-column="4" selection-end-line="417" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BasicProject/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
-          <folding>
-            <element signature="e#636#668#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/basicapp/profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="136" selection-start-line="24" selection-start-column="136" selection-end-line="24" selection-end-column="136" />
+        <state relative-caret-position="133">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
     <entry file="das://f67e2439-5f5f-4c1f-8ddc-31e2cabef061/schema/main/table/basicapp_testsession">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="36318467-de58-49f4-a202-9b7fdd575edc">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://f67e2439-5f5f-4c1f-8ddc-31e2cabef061/schema/main/table/auth_user">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state projectRestartId="36318467-de58-49f4-a202-9b7fdd575edc">
           <filtering>
@@ -967,18 +837,114 @@
         <state projectRestartId="36318467-de58-49f4-a202-9b7fdd575edc">
           <filtering>
             <filter text="" />
-            <filter text="session_id = 157" />
+            <filter text="session_id = 168" />
           </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/basicapp/snippet_archive.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="96" selection-start-line="15" selection-start-column="96" selection-end-line="15" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/basicapp/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/django/db/models/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="662" column="8" selection-start-line="662" selection-start-column="8" selection-end-line="662" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/default.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BasicProject/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#636#668#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basicapp/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="78" selection-start-line="10" selection-start-column="78" selection-end-line="10" selection-end-column="78" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BasicProject/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="110" column="21" lean-forward="true" selection-start-line="110" selection-start-column="21" selection-end-line="110" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basicapp/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/django/forms/formsets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="65" column="14" selection-start-line="65" selection-start-column="10" selection-end-line="65" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/django/forms/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7718">
+          <caret line="468" column="6" selection-start-line="468" selection-start-column="6" selection-end-line="468" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basicapp/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/basicapp/profile_update.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/basicapp/profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/basicapp/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="56" column="24" lean-forward="true" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
-          <folding>
-            <element signature="e#1#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="504">
+          <caret line="103" column="47" selection-start-line="103" selection-start-column="47" selection-end-line="103" selection-end-column="47" />
         </state>
       </provider>
     </entry>

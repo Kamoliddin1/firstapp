@@ -55,7 +55,10 @@ def test_session(request, pk=None):
     if request.method == 'GET':
 
         if request.user:
-            questions = Question.objects.filter(answers__session_id=pk)
+            questions = Question.objects.filter(answers__session_id=pk, answers__user=request.user).distinct()
+            if questions.count() == 0:
+                messages.warning(request, f'Invalid request')
+                return redirect('/')
             answers = Answer.objects.filter(question__in=questions, session=pk)
             n = TestSession.objects.get(id=pk).no_of_questions
 
@@ -63,7 +66,9 @@ def test_session(request, pk=None):
             formset = formset_class(questions=questions, initial=[{'id': answer.id} for answer in answers])
 
             return render(request, 'basicapp/test.html', {'formset': formset, 'time_for': n * 10})
-        return HttpResponseRedirect(reverse('index'))
+        else:
+            return redirect('/')
+    return HttpResponseRedirect(reverse('index'))
 
 
 @login_required()
@@ -73,6 +78,8 @@ def submit_test_session(request):
         formset = AnswerFormSet(data=request.POST)
         answers = []
         now = timezone.now()
+        sess_created_at = None
+        sess_no_questions = None
         session = None
         if formset.is_valid():
             for form in formset.forms:
@@ -81,23 +88,20 @@ def submit_test_session(request):
                         answer_id = form.cleaned_data['id']
                         answer = Answer.objects.get(pk=answer_id)
                         answer.choice = form.cleaned_data['choice']
-
-                        if now - answer.session.created_at > timezone.timedelta(
-                                seconds=answer.session.no_of_questions * 10):
-                            messages.warning(request, f'Time is up')
-                            answer.session.finished_at = timezone.now()
-                            answer.session.save()
-                            # return redirect('/')
-
-                        elif answer.is_correct:
-                            messages.success(request, f'You have passed successfully {answer.id}th')
-                            answer.session.finished_at = timezone.now()
-                            answer.session.save()
-                        else:
-                            messages.info(request, f'You have not passed {answer.id}th')
+                        sess_created_at = answer.session.created_at
+                        sess_no_questions = answer.session.no_of_questions
+                        answer.session.finished_at = timezone.now()
+                        answer.session.save()
 
                         answer.save()
                         answers.append(answer)
+
+        if now - sess_created_at > timezone.timedelta(
+                seconds=sess_no_questions * 10):
+            messages.warning(request, f'Time is up')
+            return redirect('/')
+        else:
+            messages.success(request, f'On time')
 
         data = list(map(lambda answer: {'choice': answer.choice, 'word': answer.question.word}, answers))
         correct_answers = sum(list(map(lambda answer: answer.is_correct, answers)))
@@ -144,6 +148,7 @@ class ProfileView(ArchiveIndexView):
         test_sessions = TestSession.objects.filter(answers__user=self.request.user, finished_at__isnull=False).order_by(
             '-created_at')
         not_finished = TestSession.objects.filter(answers__user=self.request.user, finished_at__isnull=True).last()
+
         for session in test_sessions:
 
             if session.finished_at < session.created_at + \

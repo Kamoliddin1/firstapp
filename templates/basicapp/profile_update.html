@@ -1,0 +1,9 @@
+{% extends 'basicapp/base.html' %}
+{% block content %}
+<form method="post" enctype='multipart/form-data'>
+{% csrf_token %}
+    <h2 class="glyphicon-piggy-bank">Update Profile</h2>
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-outline-success mt-5">Update</button>
+</form>
+{% endblock %}
