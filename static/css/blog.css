@@ -96,3 +96,14 @@ a.article-title:hover {
 .step-links {
     display: inline-flex;
 }
+
+input#num-of-q {
+    width: 25%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}

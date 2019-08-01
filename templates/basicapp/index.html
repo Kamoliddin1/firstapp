@@ -1,19 +1,30 @@
 {% extends 'basicapp/base.html' %}
 
 {% block content %}
-    <div class="content-section">
-        <h1>Welcome</h1>
-        {% if user.is_authenticated %}
-            <h3>Hello {{ user.username }}</h3>
-            <h5>Let's start our game</h5>
-        {% else %}
-            <h3>Please register if u want play a game</h3>
+    <div class="content-section animated bounceInDown delay-0.5s">
+
+        {% if not user.is_authenticated %}
+            <h1 class="text-center">Welcome</h1>
         {% endif %}
+        {% if user.is_authenticated %}
+            <div class="text-muted text-sm-center">
+                <h3>Hello dear {{ user.username }}</h3>
+                <h5 class="animated tada delay-1s">Let's start our game</h5>
+            </div>
+        {% else %}
+            <h5 class="text-muted text-sm-center">Please <a href="{% url 'register' %}">register</a> if you want to play
+                the game</h5>
+        {% endif %}
+        <div class="description text-center mb-2">
+            <small class="text-info">Description: This is a game to develop uzbek language skills</small>
+        </div>
         <form action="{% url 'test' %}" method="post">
             {% csrf_token %}
-            <h4>Choose # of questions: </h4><br>
-            <input type="number" name="no_of_questions" placeholder="Submit"><br>
-            <button class="btn btn-outline-info mt-3" name="button" type="submit">Start</button>
+            <div class="">
+                <label for="num-of-q" class="text-info wy-text-large">Choose # of questions: </label>
+                <input id="num-of-q" type="number" name="no_of_questions" placeholder="Number of questions">
+            </div>
+            <button class="btn btn-outline-info mt-3 animated jackInTheBox delay-2s" name="button" type="submit">Start</button>
         </form>
     </div>
 {% endblock %}

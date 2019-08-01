@@ -1,15 +1,16 @@
 {% extends 'basicapp/base.html' %}
-{#{% debug %}#}
 {% block aside %}
     <div class="col-md-8">
-        <div class="content-section">
+        <div class="content-section animated fadeInDown">
             <form method="post">
                 {% csrf_token %}
                 <div class="media">
-                    <img src="{{ user.userprofileinfo.profile_image.url }}" class="rounded-circle account-img">
+                    <img src="{{ user.userprofileinfo.profile_image.url }}" class="rounded-circle account-img animated bounceInDown delay-0.5s">
                     <div class="media-body">
-                        <h3>Hi dear user {{ user.username }}</h3>
-                        <p class="text-muted">Portfolio: <small>{{ user.userprofileinfo.portfolio_site }}</small></p>
+                        <div class="profile text-lg-center animated tada delay-2s">
+                            <span class="">Hi dear user <b>{{ user.username }}</b></span>
+                            <p class="text-muted">Portfolio: <a href="{{ user.userprofileinfo.portfolio_site }}">{{ user.userprofileinfo.portfolio_site }}</a></p>
+                        </div>
                         {% if test %}
                             <p class="text-muted mt-2 border-top">Your Correct Answers: <b>{{ correct_answers }}</b></p>
                             {% if incorrect_answers == 0 %}

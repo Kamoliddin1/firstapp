@@ -4,6 +4,8 @@ from django.contrib.auth.models import User, AbstractUser
 
 from itertools import product
 
+from django.utils import timezone
+
 
 class UserProfileInfo(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -17,7 +19,8 @@ class UserProfileInfo(models.Model):
         return sum(list(map(lambda answer: answer.is_correct, self.user.answers.all())))
 
     def incorrect_answers(self):
-        return sum(list(map(lambda answer: not answer.is_correct, self.user.answers.all())))
+        return self.user.answers.filter(session__finished_at__isnull=False).count() - self.correct_answers()
+        # return sum(list(map(lambda answer: not answer.is_correct, self.user.answers.all())))
 
     def total_answers(self):
         return self.user.answers.all().count()
@@ -72,7 +75,9 @@ class Answer(models.Model):
 
     @property
     def is_correct(self):
-        if self.choice == self.question.word:
-            return True
-        else:
+        if self.session.finished_at and self.session.finished_at < self.session.created_at + \
+                        timezone.timedelta(seconds=self.session.no_of_questions * 10):
+            if self.choice == self.question.word:
+                return True
             return False
+        return False

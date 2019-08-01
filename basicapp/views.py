@@ -61,7 +61,9 @@ def test_session(request, pk=None):
                 return redirect('/')
             answers = Answer.objects.filter(question__in=questions, session=pk)
             n = TestSession.objects.get(id=pk).no_of_questions
-
+            for answer in answers:
+                answer.session.created_at = timezone.now()
+                answer.session.save()
             formset_class = formset_factory(AnswerForm, AnswerFormSet)
             formset = formset_class(questions=questions, initial=[{'id': answer.id} for answer in answers])
 
@@ -78,8 +80,6 @@ def submit_test_session(request):
         formset = AnswerFormSet(data=request.POST)
         answers = []
         now = timezone.now()
-        sess_created_at = None
-        sess_no_questions = None
         session = None
         if formset.is_valid():
             for form in formset.forms:
@@ -87,21 +87,23 @@ def submit_test_session(request):
                     if session is None:
                         answer_id = form.cleaned_data['id']
                         answer = Answer.objects.get(pk=answer_id)
-                        answer.choice = form.cleaned_data['choice']
                         sess_created_at = answer.session.created_at
                         sess_no_questions = answer.session.no_of_questions
+
+                        if now - sess_created_at > timezone.timedelta(
+                                seconds=sess_no_questions   * 10):
+                            messages.warning(request, f'Time is up')
+                            return redirect('/')
+
+                        answer.choice = form.cleaned_data['choice']
+
                         answer.session.finished_at = timezone.now()
                         answer.session.save()
 
                         answer.save()
                         answers.append(answer)
 
-        if now - sess_created_at > timezone.timedelta(
-                seconds=sess_no_questions * 10):
-            messages.warning(request, f'Time is up')
-            return redirect('/')
-        else:
-            messages.success(request, f'On time')
+        messages.success(request, f'On time')
 
         data = list(map(lambda answer: {'choice': answer.choice, 'word': answer.question.word}, answers))
         correct_answers = sum(list(map(lambda answer: answer.is_correct, answers)))
@@ -146,20 +148,23 @@ class ProfileView(ArchiveIndexView):
         data = super().get_context_data(**kwargs)
         count_success = 0
         test_sessions = TestSession.objects.filter(answers__user=self.request.user, finished_at__isnull=False).order_by(
-            '-created_at')
-        not_finished = TestSession.objects.filter(answers__user=self.request.user, finished_at__isnull=True).last()
+            '-created_at').distinct()
+
+        not_finished = TestSession.objects.filter(answers__user=self.request.user, finished_at__isnull=True)
 
         for session in test_sessions:
-
             if session.finished_at < session.created_at + \
                     timezone.timedelta(seconds=session.no_of_questions * 10):
                 count_success += 1
         data['correct_answers'] = UserProfileInfo.objects.get(user=self.request.user).correct_answers()
         data['incorrect_answers'] = UserProfileInfo.objects.get(user=self.request.user).incorrect_answers()
-        data['not_finished'] = not_finished
+        if not_finished.count() == 0:
+            data['not_finished'] = not_finished
+        else:
+            data['not_finished'] = not_finished[0]
 
         data['success'] = count_success
-        data['fail'] = test_sessions.count() - count_success
+        data['fail'] = not_finished.count()
         data['test'] = test_sessions
         return data
 
