@@ -4,6 +4,9 @@
         <div class="content-section animated fadeInDown">
             <form method="post">
                 {% csrf_token %}
+                <div class="resp-image">
+                    <img src="{{ user.userprofileinfo.profile_image.url }}" class="rounded-circle account-img animated bounceInDown delay-0.5s">
+                </div>
                 <div class="media">
                     <img src="{{ user.userprofileinfo.profile_image.url }}" class="rounded-circle account-img animated bounceInDown delay-0.5s">
                     <div class="media-body">

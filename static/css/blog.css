@@ -66,6 +66,7 @@ a.article-title:hover {
     text-decoration: none;
 }
 
+
 .article-svg {
     width: 25px;
     height: 25px;
@@ -106,4 +107,40 @@ input#num-of-q {
     border: 1px solid #ced4da;
     border-radius: .25rem;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.resp-image img {
+    display: none;
+}
+@media (max-width: 768px) {
+    select#id_form-0-choice {
+        width: 60%;
+    }
+
+    p.text-muted a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 425px) {
+
+    p.text-muted a {
+        font-size: 14px;
+    }
+
+    .account-img {
+        height: 90px;
+        width: 90px;
+    }
+}
+
+@media (max-width: 375px) {
+    .account-img{
+        display: none;
+    }
+
+    .resp-image img{
+        display: block;
+        margin: 0 auto;
+    }
 }
