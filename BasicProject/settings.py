@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'basicapp',
+    'api',
     'crispy_forms',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

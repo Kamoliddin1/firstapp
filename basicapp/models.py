@@ -1,4 +1,3 @@
-from PIL import Image
 from django.db import models
 from django.contrib.auth.models import User, AbstractUser
 
@@ -8,7 +7,7 @@ from django.utils import timezone
 
 
 class UserProfileInfo(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='user_profile')
     portfolio_site = models.URLField(blank=True, null=True)
     profile_image = models.ImageField(upload_to='profile_pics', default='default.jpg')
 
