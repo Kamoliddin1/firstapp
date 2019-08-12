@@ -19,7 +19,6 @@ class UserProfileInfo(models.Model):
 
     def incorrect_answers(self):
         return self.user.answers.filter(session__finished_at__isnull=False).count() - self.correct_answers()
-        # return sum(list(map(lambda answer: not answer.is_correct, self.user.answers.all())))
 
     def total_answers(self):
         return self.user.answers.all().count()

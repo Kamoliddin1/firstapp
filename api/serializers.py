@@ -7,7 +7,8 @@ from basicapp.models import (UserProfileInfo,
 
 
 class UserSerializer(serializers.ModelSerializer):
-    portfolio_site = serializers.PrimaryKeyRelatedField(queryset=UserProfileInfo.objects.all(), source='user_profile.portfolio_site',
+    portfolio_site = serializers.PrimaryKeyRelatedField(queryset=UserProfileInfo.objects.all(),
+                                                        source='user_profile.portfolio_site',
                                                         required=False, default=None)
 
     class Meta:

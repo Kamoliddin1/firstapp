@@ -175,4 +175,4 @@ class ProfileUpdateView(UpdateView):
     success_url = '/profile'
 
     def get_object(self, **kwargs):
-        return self.request.user.userprofileinfo
+        return self.request.user.user_profile
