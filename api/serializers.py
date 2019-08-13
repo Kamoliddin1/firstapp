@@ -7,13 +7,10 @@ from basicapp.models import (UserProfileInfo,
 
 
 class UserSerializer(serializers.ModelSerializer):
-    portfolio_site = serializers.PrimaryKeyRelatedField(queryset=UserProfileInfo.objects.all(),
-                                                        source='user_profile.portfolio_site',
-                                                        required=False, default=None)
 
     class Meta:
         model = User
-        fields = ['id', 'username', 'email', 'password', 'portfolio_site']
+        fields = ['id', 'username', 'email', 'password']
 
     def create(self, validated_data):
         user = User.objects.create(
@@ -24,16 +21,20 @@ class UserSerializer(serializers.ModelSerializer):
         return user
 
 
+class UserProfileSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = UserProfileInfo
+        fields = ['user', 'portfolio_site', 'profile_image']
+
+
 class TestSessionSerializer(serializers.ModelSerializer):
     class Meta:
         model = TestSession
-
-
-class QuestionSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Question
+        fields = ['no_of_questions', 'created_at', 'finished_at']
 
 
 class AnswerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Answer
+        fields = ['user', 'question', 'session', 'choice']
