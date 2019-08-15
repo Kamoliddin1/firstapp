@@ -12,20 +12,12 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields = ['id', 'username', 'email', 'password']
 
-    def create(self, validated_data):
-        user = User.objects.create(
-            username=validated_data['username']
-        )
-        user.set_password(validated_data['password'])
-        user.save()
-        return user
-
 
 class UserProfileSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = UserProfileInfo
-        fields = ['user', 'portfolio_site', 'profile_image']
+        fields = ['id', 'user', 'portfolio_site', 'profile_image']
 
 
 class TestSessionSerializer(serializers.ModelSerializer):

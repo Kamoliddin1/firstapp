@@ -1,13 +1,11 @@
 from django.contrib.auth.models import User
 
 from rest_framework import viewsets, permissions, pagination
-from rest_framework.response import Response
 
 from .serializers import (UserSerializer, UserProfileSerializer,
                           TestSessionSerializer, AnswerSerializer)
 
-from basicapp.models import (UserProfileInfo, TestSession,
-                             Question, Answer)
+from basicapp.models import (UserProfileInfo, TestSession, Answer)
 
 
 class StandardResultsSetPagination(pagination.PageNumberPagination):
@@ -18,16 +16,24 @@ class StandardResultsSetPagination(pagination.PageNumberPagination):
 
 class UserViewSet(viewsets.ModelViewSet):
     serializer_class = UserSerializer
-    queryset = User.objects.all()
     permission_classes = [permissions.IsAuthenticated]
     pagination_class = StandardResultsSetPagination
+
+    def get_queryset(self):
+        user = self.request.user
+        if user.is_superuser:
+            return User.objects.all()
+        return User.objects.filter(pk=user.pk)
 
 
 class UserProfileViewSet(viewsets.ModelViewSet):
     serializer_class = UserProfileSerializer
-    queryset = UserProfileInfo.objects.all()
     permission_classes = [permissions.IsAuthenticated]
     pagination_class = StandardResultsSetPagination
+
+    def get_queryset(self):
+        user = self.request.user
+        return UserProfileInfo.objects.filter(user=user)
 
 
 class TestSessionViewSet(viewsets.ModelViewSet):
