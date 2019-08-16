@@ -4,9 +4,9 @@ from rest_framework import routers
 from api.views import UserViewSet, UserProfileViewSet, TestSessionViewSet, AnswerViewSet
 
 router = routers.DefaultRouter()
-router.register(r'users', UserViewSet, base_name='user'),
+router.register(r'users', UserViewSet, base_name='users'),
 router.register(r'profile', UserProfileViewSet, base_name='profile')
-router.register(r'test', TestSessionViewSet, base_name='test')
+router.register(r'test', TestSessionViewSet, base_name='test_sessions')
 router.register(r'answer', AnswerViewSet, base_name='answer')
 
 urlpatterns = [

@@ -1,11 +1,23 @@
+import base64
+
 from django.contrib.auth.models import User
-from api.views import UserViewSet
-from rest_framework.test import APIRequestFactory, force_authenticate
 
-factory = APIRequestFactory()
-user = User.objects.get(username='admin')
-view = UserViewSet.as_view()
+from rest_framework.test import APITestCase
 
-request = factory.get('http://127.0.0.1:8000/api/users')
-force_authenticate(request, user=user)
-response = view(request)
+
+class AuthTests(APITestCase):
+    def setUp(self):
+        self.username = 'admin'
+        self.password = 'admin123'
+        self.url = "http://127.0.0.1:8000/api/users/"
+        self.user = User.objects.create_user(username=self.username, password=self.password)
+
+        credentials = base64.b64encode(f'{self.username}:{self.password}'.encode('utf-8'))
+        self.client.credentials(HTTP_AUTHORIZATION='Basic {}'.format(credentials.decode('utf-8')))
+
+    def test_is_authenticated(self):
+        self.client.login(username=self.username, password=self.password)
+
+        response = self.client.get(self.url)
+        self.assertEqual(200, response.status_code)
+
