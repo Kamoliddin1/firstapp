@@ -42,13 +42,18 @@ INSTALLED_APPS = [
     'api',
     'crispy_forms',
     'rest_framework',
+    'rest_framework.authtoken',
+
+    'rest_auth',
 ]
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 100,
     'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
         'rest_framework.authentication.BasicAuthentication',
+
     ],
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',
@@ -90,8 +95,12 @@ WSGI_APPLICATION = 'BasicProject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'sample_db',
+        'USER': 'sample_user',
+        'PASSWORD': 'sample_password',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 
