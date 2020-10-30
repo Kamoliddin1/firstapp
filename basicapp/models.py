@@ -74,8 +74,6 @@ class Answer(models.Model):
     @property
     def is_correct(self):
         if self.session.finished_at and self.session.finished_at < self.session.created_at + \
-                        timezone.timedelta(seconds=self.session.no_of_questions * 10):
-            if self.choice == self.question.word:
-                return True
-            return False
+                        timezone.timedelta(seconds=self.session.no_of_questions * 10) and self.choice == self.question.word:
+            return True
         return False
